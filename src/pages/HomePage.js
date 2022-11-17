@@ -52,7 +52,8 @@ class HomePage extends React.Component {
                         There are {100000} visits and {100} games created. Thank you so
                         much for visiting my page and choosing this application for
                         playing Mafia and Werewolf! <br/>
-                        To play a new game, please <strong>press</strong> on the button below!
+                        To play a new game or log-in before playing a new game,
+                        please <strong>press</strong> on the button below!
                     </Typography>
                 </CardContent>
                 <CardActions sx={{ alignContent: 'right' }}>
@@ -64,6 +65,7 @@ class HomePage extends React.Component {
                                         color: 'red',
                                         backgroundColor: 'white'
                                     }}}
+                                href={(this.state.uid === null) ? '/log-in' : '/'}
                         >{(this.state.uid === null) ? "LOG-IN/SIGN-UP" : 'Create a Game'}</Button>
                     </Container>
                 </CardActions>
